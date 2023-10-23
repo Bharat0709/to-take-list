@@ -1,12 +1,5 @@
 import { useState } from "react";
 
-const initialItems = [
-  { id: 1, description: "Passports", quantity: 2, packed: false },
-  { id: 2, description: "Socks", quantity: 12, packed: true },
-  { id: 3, description: "Charger", quantity: 2, packed: true },
-  { id: 4, description: "Phone", quantity: 2, packed: false },
-];
-
 export default function App() {
   const [items, setitems] = useState([]);
 
@@ -145,7 +138,7 @@ function Item({ item, onDeleteItem, onToggleItem }) {
 }
 
 function Stats({ items }) {
-  if (items.length == 0) {
+  if (items.length === 0) {
     return <p className="stats">Start Adding items </p>;
   }
   const numItems = items.length;
